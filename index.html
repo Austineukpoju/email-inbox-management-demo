@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#183153"><title>Email & Inbox Management — Portfolio Demo</title>
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div><p class="eyebrow">PORTFOLIO PROJECT 02</p><h1>Email & Inbox Management</h1></div><span class="demo-label">Fictional demo</span></header>
+<div class="app-shell">
+<aside class="sidebar">
+<div class="brand"><div class="brand-icon">✉</div><div><strong>Inbox Assistant</strong><small>Sample workspace</small></div></div>
+<button class="folder active" data-folder="inbox">📥 <span>Inbox</span><b id="inboxCount">4</b></button>
+<button class="folder" data-folder="priority">⭐ <span>Priority</span></button>
+<button class="folder" data-folder="followup">⏰ <span>Follow-up</span><b id="followCount">2</b></button>
+<button class="folder" data-folder="archive">📦 <span>Archived</span></button>
+<div class="sidebar-bottom"><strong>Demo boundaries</strong><p>These sample messages are invented. Nothing is connected to a real email account, and no messages can be sent.</p></div>
+</aside>
+<main>
+<section class="intro"><div><p class="eyebrow">EMAIL WORKFLOW</p><h2 id="heading">Inbox overview</h2><p id="subheading">Prioritise messages, review details, and keep follow-ups visible.</p></div><div class="summary"><span>Messages</span><strong id="totalCount">6</strong></div></section>
+<section class="metrics">
+<div class="metric"><span>Needs attention</span><strong id="attentionCount">3</strong><small>Priority or follow-up</small></div>
+<div class="metric"><span>Follow-ups</span><strong id="metricFollow">2</strong><small>Keep responses moving</small></div>
+<div class="metric"><span>Archived</span><strong id="archivedCount">1</strong><small>Filed for later</small></div>
+</section>
+<section class="workspace">
+<div class="list-panel">
+<div class="list-header"><div><h3 id="listTitle">Inbox</h3><p>Choose a message to review</p></div><button id="newMessage" class="primary">＋ Draft reply</button></div>
+<div class="toolbar"><input id="search" type="search" placeholder="Search sender or subject…"><select id="sort" aria-label="Sort messages"><option value="newest">Newest first</option><option value="sender">Sender A–Z</option></select></div>
+<div id="messageList" class="message-list"></div>
+</div>
+<div class="reader" id="reader"><div class="reader-empty"><div class="big-envelope">✉</div><h3>Select a message</h3><p>Read the sample email, review its priority, and decide what follow-up is needed.</p></div></div>
+</section>
+<section class="workflow panel">
+<div><p class="eyebrow">WORKFLOW EXAMPLE</p><h3>How I manage an inbox</h3></div>
+<div class="workflow-grid">
+<div><span>01</span><strong>Review</strong><p>Scan new messages and identify urgent requests.</p></div>
+<div><span>02</span><strong>Prioritise</strong><p>Flag important items and separate follow-ups.</p></div>
+<div><span>03</span><strong>Respond</strong><p>Prepare clear draft replies for approval.</p></div>
+<div><span>04</span><strong>Organise</strong><p>Archive completed items and keep next steps visible.</p></div>
+</div>
+</section>
+<footer>Portfolio demonstration · Fictional messages only · No real email account connected</footer>
+</main>
+</div>
+<dialog id="replyDialog"><form id="replyForm"><div class="dialog-head"><div><p class="eyebrow">SAMPLE ONLY</p><h3 id="replyTitle">Draft a reply</h3></div><button type="button" id="closeDialog" class="close">✕</button></div>
+<label>To<input id="replyTo" required></label><label>Subject<input id="replySubject" required></label><label>Draft message<textarea id="replyBody" rows="6" required></textarea></label><p class="notice">This is only a portfolio preview. It will not send an email or connect to Gmail.</p><div class="dialog-actions"><button type="button" id="cancelReply" class="secondary">Cancel</button><button type="submit" class="primary">Save sample draft</button></div></form></dialog>
+<script src="app.js"></script>
+</body></html>

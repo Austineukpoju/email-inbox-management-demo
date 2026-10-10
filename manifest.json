@@ -1,0 +1,9 @@
+{
+  "name": "Email and Inbox Management Portfolio Demo",
+  "short_name": "Inbox Demo",
+  "description": "Interactive fictional email management workflow for a virtual assistant portfolio.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f6fa",
+  "theme_color": "#183153"
+}
